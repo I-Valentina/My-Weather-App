@@ -1,0 +1,86 @@
+body {
+  font-family: arial, monospace;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  margin: 80px;
+}
+
+h1 {
+  color: #5a6275;
+  font-size: 60px;
+  font-weight: 600;
+  margin-left: 45px;
+}
+
+form {
+  position: fixed;
+  right: 120px;
+  top: 70px;
+  padding: 30px 20px;
+  font-size: 20px;
+}
+
+button {
+  position: relative;
+  float: right;
+  margin-right: 60px;
+  top: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.todaysforecast {
+  color: #42a5f5;
+  position: relative;
+  top: 20px;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  top: -52px;
+}
+
+.col-3,
+.col-5 {
+  font-size: 25px;
+}
+
+.limitstoday {
+  color: #5a6275;
+  text-align: center;
+}
+
+.degreestoday {
+  color: #5a6275;
+  font-size: 90px;
+}
+
+.detailsdeco {
+  color: #006ec5;
+}
+
+.nextdaysforecast {
+  color: #5a6275;
+  font-size: 25px;
+  line-height: 45px;
+  position: relative;
+  top: 40px;
+  left: 80px;
+  max-width: 100%;
+}
+
+.footer {
+  position: relative;
+  top: 60px;
+  text-align: right;
+  color: grey;
+  font-style: italic;
+  font-family: monospace;
+}
