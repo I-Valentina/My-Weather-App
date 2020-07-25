@@ -1,9 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <h1 id="city-input">
+    Satu Mare
+  </h1>
+
+  <form id="location-input">
+    <input type="text" id="location-search" placeholder="🔍Search location ..." autofocus="on" autocomplete="off" />
+    <input type="submit" value="Search" />
+  </form>
+
+  <button id="currentLocationSearch">
+    Current Location
+  </button>
+
+  <div class="todaysforecast">
+    <div class="container">
+      <div class="row">
+        <div class="col-3" id="exactTime">
+          <strong>Today</strong>, Saturday
+        </div>
+        <div class="col-5">
+          <span class="degreestoday" id="daytemperature">
+            <strong>15 </strong></span>
+          <a href "#" class="link" id="celsius"> ℃ |</a>
+          <a href "#" class="link" id="fahrenheit"> °F</a>
+          <img src="images/Mostly Sunny 2.png" width="120" alt="Mostly sunny" class="degreestoday" />
+
+          <br />
+          <span id=conditiontoday><em>Mostly cloudy</em></span>
+        </div>
+        <div class="col-2">
+          SUNRISE
+          <br />
+          <span class="detailsdeco">
+            <strong>05:29</strong>
+          </span>
+          <br />
+          CHANCE OF RAIN
+          <br />
+          <span class="detailsdeco">
+            <strong>60 %</strong>
+          </span>
+          <br />
+          WIND
+          <br />
+          <span class="detailsdeco">
+            <strong>SSW 2 km/hr</strong>
+          </span>
+        </div>
+        <div class="col-2">
+          SUNSET
+          <br />
+          <span class="detailsdeco">
+            <strong>21:30</strong>
+          </span>
+          <br />
+          HUMIDITY
+          <br />
+          <span class="detailsdeco">
+            <strong>94 %</strong>
+          </span>
+          <br />
+          FEELS LIKE
+          <br />
+          <span class="detailsdeco">
+            <strong>17℃</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nextdaysforecast">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <div class="card text-center" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>Sunday</strong>
+              </h5>
+              <p class="card-image">
+                <img src="images/Rain.png" width="50px" />
+              </p>
+              <strong>21 ℃ - 16 ℃</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card text-center" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>Monday</strong>
+              </h5>
+              <p class="card-image">
+                <img src="images/thunderstorm.png" width="50px" />
+              </p>
+              <strong>26 ℃ - 18 ℃</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card text-center" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>Tuesday</strong>
+              </h5>
+              <p class="card-image">
+                <img src="images/Rain.png" width="50px" />
+              </p>
+              <strong>22 ℃ - 13 ℃</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card text-center" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>Wednesday</strong>
+              </h5>
+              <p class="card-text">
+                <img src="images/sun.png" width="50px" />
+              </p>
+              <strong>24 ℃ - 13 ℃</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card text-center" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>Thursday</strong>
+              </h5>
+              <p class="card-text">
+                <img src="images/Mostly Sunny 2.png" width="50px" />
+              </p>
+              <strong>26 ℃ - 16 ℃</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer">
+    Coded by Ioana Valentina Adamović
+  </p>
+  <script src="src/script.js"></script>
+</body>
+
 </html>
