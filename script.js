@@ -32,7 +32,7 @@ function formatHours(timestamp) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city-input");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -75,17 +75,18 @@ function handleSubmit(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  celsiusDegrees.classList.remove("active");
-  fahrenheitDegrees.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
-  celsiusDegrees.classList.add("active");
-  fahrenheitDegrees.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -116,16 +117,16 @@ function displayForecast(response) {
 
 let celsiusTemperature = null;
 
-let form = document.querySelector("#location-input");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitDegrees = document.querySelector("#fahrenheit-link");
-fahrenheitDegrees.addEventListener("click", displayFahrenheitTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusDegrees = document.querySelector("#celsius-link");
-celsiusDegrees.addEventListener("click", displayCelsiusTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("Cluj-Napoca");
+search("New York");
 
 //function searchMyCity(position) {
 //  let apiKey = "ddd2817c1cc0ded847d366c31612117d";
