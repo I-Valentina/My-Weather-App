@@ -39,7 +39,6 @@
 
 <div class="forecast-overview">
 <h1 id="city-input">
-  Satu Mare
 </h1>
   <ul>
     <li>
@@ -56,16 +55,15 @@
 
 <div class="col-6">
   <div class="today weather-forecast">
-    <img src="images/Mostly Sunny 2.png" 
+    <img src="" 
     alt="Mostly sunny" 
     id="todaysicon"
     class="float-left" />
     <div class="float-left">
       <strong id="temperature"></strong>
       <span class="units">
-        <a href "#" class="active" id="celsius-degrees"> ℃</a>
-       |
-        <a href "#" id="fahrenheit-degrees"> °F</a>
+        <a href="#" id="celsius-link" class="active">°C</a> |
+        <a href="#" id="fahrenheit-link">°F</a>
       </span>
     </div>
   </div>
@@ -83,7 +81,9 @@
 </div>
 </div>
 
-  <div class="row weather-forecast" id="forecast"></div>
+  <div class="row weather-temperature" id="forecast">
+    <h3></h3>
+  </div>
   </div>
 
       <small>
