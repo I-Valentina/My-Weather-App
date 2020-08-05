@@ -39,6 +39,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#todaysicon");
 
+  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -104,7 +105,7 @@ function displayForecast(response) {
     <img src ="https://openweathermap.org/img/wn/${
       forecast.weather[0].icon
     }@2x.png" />
-    <div class = "weather-forecast-temperature">
+    <div class = "weather-temperature-temperature">
     <strong>
     ${Math.round(forecast.main.temp_max)}°
     </strong>

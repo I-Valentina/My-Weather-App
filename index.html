@@ -25,7 +25,6 @@
     class="form-control" 
     id="city-input" 
     placeholder="🔍Search location ..." 
-    autofocus="on" 
     autocomplete="off" />
     </div>
     <div class="col-3">
@@ -41,12 +40,12 @@
 <h1 id="city">
 </h1>
   <ul>
-    <li>
+    <li class="descriptiondate">
       <span id="date">
         
       </span>
     </li>
-    <li id="description">
+    <li id="description"  class="descriptiondate">
       
     </li>
   </ul>
@@ -68,23 +67,40 @@
   </div>
 </div>
 
-<div class="col-6">
-<ul>
+<div class="col-3">
+<ul class="details">
   <li>
-    Humidity:<span id="humidity"></span>%
+    Sunrise:<span id="sunrise"></span>
+
   </li>
   <li>
-    Wind:<span id="wind"></span>km/h
+    Humidity:<span id="humidity"></span> %
+  </li>
+  <li>
+    Pressure:<span id="pressure"></span> hPA
   </li>
 </ul>
 </div>
+<div class="col-3">
+  <ul class="details">
+    <li>
+      Sunset:<span id="sunset"></span>
+
+    </li>
+    <li>
+      Wind:<span id="wind"></span> km/h
+    </li>
+    <li>
+      Visibility:<span id="visibility"></span> km
+    </li>
+  </ul>
 </div>
 
   <div class="row weather-temperature" id="forecast">
   </div>
 
-      <small>
-        <a href "https://github.com/I-Valentina/My-Weather-App.git" target=" blank">
+      <small class="footer">
+        <a href "https://github.com/I-Valentina/My-Weather-App" target=" blank">
           Open-source code
           </a>
           by Ioana Valentina Adamović
