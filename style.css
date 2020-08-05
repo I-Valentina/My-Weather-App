@@ -19,10 +19,14 @@ ul {
   list-style: none;
   color: #48484a;
   font-size: 14px;
-  font-weight: 100;
   line-height: 19px;
+  font-weight: 300;
   margin: 0;
   padding: 0;
+}
+
+#description {
+  font-style: italic;
 }
 
 li:first-letter {
@@ -86,6 +90,10 @@ li:first-letter {
   padding: 0;
   line-height: 20px;
   color: #48484a;
+}
+
+.textdeco {
+  font-weight: bold;
 }
 
 .weather-temperature {

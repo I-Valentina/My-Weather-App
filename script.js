@@ -11,7 +11,7 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
 
-  return `${day} ${formatHours(timestamp)}`;
+  return `${day}, ${formatHours(timestamp)}`;
 }
 
 function formatHours(timestamp) {
