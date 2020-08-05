@@ -34,8 +34,12 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
+  let sunsriseElement = document.querySelector("#sunrise");
+  let sunsetElement = document.querySelector("#sunset");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let pressureElement = document.querySelector("#pressure");
+  let visibilityElement = document.querySelector("#visibility");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#todaysicon");
 
@@ -45,8 +49,12 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  sunsriseElement.innerHTML = formatHours(response.data.sys.sunrise * 1000);
+  sunsetElement.innerHTML = formatHours(response.data.sys.sunset * 1000);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  pressureElement.innerHTML = response.data.main.pressure;
+  visibilityElement.innerHTML = response.data.visibility / 1000;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
@@ -128,13 +136,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
-
-//function searchMyCity(position) {
-//  let apiKey = "ddd2817c1cc0ded847d366c31612117d";
-//  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-// axios.get(apiUrl).then(displayWeatherCondition);
-//}
-
-//function currentLocationSearch(event) {
-//  navigator.geolocation.getCurrentPosition(searchMyCity);
-//}

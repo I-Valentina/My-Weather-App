@@ -19,7 +19,7 @@
   
         <form id="search-form" class ="mb-3">
         <div class="row">
-        <div class="col-9">
+        <div class="col-8">
         <input 
     type="search" 
     class="form-control" 
@@ -31,7 +31,12 @@
     <input 
     type="submit" 
     value="Search" 
-    class="btn btn-primary w-100" />
+    class="btn btn-danger w-100" />
+    </div>
+    <div class="col-1">
+      <span class="current-location">
+      <button type="button" id="location-now" class="btn btn-light w-600">🎯</button>
+      </span>
     </div>
   </div>
   </form>
@@ -70,28 +75,28 @@
 <div class="col-3">
 <ul class="details">
   <li>
-    Sunrise:<span id="sunrise"></span>
+    Sunrise: <span id="sunrise"></span>
 
   </li>
   <li>
-    Humidity:<span id="humidity"></span> %
+    Humidity: <span id="humidity"></span> %
   </li>
   <li>
-    Pressure:<span id="pressure"></span> hPA
+    Pressure: <span id="pressure"></span> hPA
   </li>
 </ul>
 </div>
 <div class="col-3">
   <ul class="details">
     <li>
-      Sunset:<span id="sunset"></span>
+      Sunset: <span id="sunset"></span>
 
     </li>
     <li>
-      Wind:<span id="wind"></span> km/h
+      Wind: <span id="wind"></span> km/h
     </li>
     <li>
-      Visibility:<span id="visibility"></span> km
+      Visibility: <span id="visibility"></span> km
     </li>
   </ul>
 </div>
